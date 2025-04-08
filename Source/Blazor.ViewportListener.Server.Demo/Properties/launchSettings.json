@@ -1,0 +1,91 @@
+{
+  // Specifies the schema for the launch settings file
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+
+  // IIS settings for the application
+  "iisSettings": {
+    // Enables anonymous authentication
+    "anonymousAuthentication": true,
+
+    // Configuration for IIS Express
+    "iisExpress": {
+      // URL for the application when using IIS Express
+      "applicationUrl": "http://localhost:8080",
+
+      // SSL port for the application when using IIS Express
+      "sslPort": 44300
+    },
+
+    // Disables Windows authentication
+    "windowsAuthentication": false
+  },
+
+  // Profiles for different launch configurations
+  "profiles": {
+    // Profile for launching with IIS Express
+    "IIS Express": {
+      // Command to use IIS Express
+      "commandName": "IISExpress",
+
+      // Environment variables for the application
+      "environmentVariables": {
+        // Sets the environment to Development
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+
+      // URI for debugging with a browser
+      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+
+      // Launches the browser when starting the application
+      "launchBrowser": true
+    },
+
+    // Profile for launching with HTTP
+    "http": {
+      // URL for the application when using HTTP
+      "applicationUrl": "http://localhost:5000",
+
+      // Command to use the project
+      "commandName": "Project",
+
+      // Enables .NET run messages
+      "dotnetRunMessages": true,
+
+      // Environment variables for the application
+      "environmentVariables": {
+        // Sets the environment to Development
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+
+      // URI for debugging with a browser
+      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+
+      // Launches the browser when starting the application
+      "launchBrowser": true
+    },
+
+    // Profile for launching with HTTPS
+    "https": {
+      // URLs for the application when using HTTPS and HTTP
+      "applicationUrl": "https://localhost:7000;http://localhost:5000",
+
+      // Command to use the project
+      "commandName": "Project",
+
+      // Enables .NET run messages
+      "dotnetRunMessages": true,
+
+      // Environment variables for the application
+      "environmentVariables": {
+        // Sets the environment to Development
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+
+      // URI for debugging with a browser
+      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+
+      // Launches the browser when starting the application
+      "launchBrowser": true
+    }
+  }
+}
