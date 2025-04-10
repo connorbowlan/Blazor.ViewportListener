@@ -10,6 +10,6 @@
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.14" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Blazor.ViewportListener\Blazor.ViewportListener.csproj" />
+	  <ProjectReference Include="..\Blazor.ViewportListener\Blazor.ViewportListener.csproj" />
 	</ItemGroup>
 </Project>
