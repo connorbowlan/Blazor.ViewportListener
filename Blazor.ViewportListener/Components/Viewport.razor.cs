@@ -46,12 +46,12 @@ public partial class Viewport : IAsyncDisposable
     {
         get
         {
-            if (!CurrentViewportSize.HasValue)
+            if (CurrentViewportSize.HasValue)
             {
-                return false;
+                return Sizes.Contains(CurrentViewportSize.Value);
             }
 
-            return Sizes.Contains(CurrentViewportSize.Value);
+            return false;
         }
     }
 
