@@ -1,0 +1,31 @@
+﻿#blazor-error-ui {
+    display: none;
+}
+
+body {
+    background: #cccccc;
+    font: 1rem Arial, sans-serif;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.demo-option a {
+    background: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
+    display: block;
+    padding: .6rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all ease .3s;
+}
+
+    .demo-option a:hover {
+        background: #ffffff;
+        color: #000000;
+    }
