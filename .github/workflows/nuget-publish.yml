@@ -1,0 +1,31 @@
+name: Publish Razor Class Library NuGet Package
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Triggers only on version tags like v1.2.3
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.x'
+
+    - name: Restore dependencies
+      run: dotnet restore Source/Blazor.ViewportListener/Blazor.ViewportListener.csproj
+
+    - name: Build
+      run: dotnet build Source/Blazor.ViewportListener/Blazor.ViewportListener.csproj --configuration Release --no-restore
+
+    - name: Pack
+      run: dotnet pack Source/Blazor.ViewportListener/Blazor.ViewportListener.csproj --configuration Release --no-build --output ./nupkgs
+
+    - name: Push to NuGet
+      run: dotnet nuget push "./nupkgs/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NuGetApiKey }}
