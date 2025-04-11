@@ -1,9 +1,8 @@
 name: Publish Razor Class Library NuGet Package
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'  # Triggers only on version tags like v1.2.3
+  release:
+    types: [published]  # Trigger the workflow on a release being published
 
 jobs:
   publish:
