@@ -6,7 +6,16 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Blazor Viewport Listener</Title>
     <PackageProjectUrl>https://github.com/connorbowlan/Blazor.ViewportListener</PackageProjectUrl>
+    <Version>1.0.1</Version>
+    <Authors>Connor Bowlan</Authors>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
   <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
